@@ -1,20 +1,6 @@
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
-  const handlePatientClick = () => {
-    const element = document.querySelector("#patients");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleClinicianClick = () => {
-    const element = document.querySelector("#clinicians");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
@@ -50,7 +36,6 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            onClick={handlePatientClick}
             className="px-8"
             data-testid="button-patients-families"
           >
@@ -59,7 +44,6 @@ export default function HeroSection() {
           <Button
             size="lg"
             variant="outline"
-            onClick={handleClinicianClick}
             className="px-8"
             data-testid="button-medical-professionals"
           >
