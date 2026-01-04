@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-white/40 uppercase tracking-wider">OUR HEADQUARTERS</p>
-                  <p className="text-white font-medium">Innovation Park, Suite 402, Cambridge, MA</p>
+                  <p className="text-white font-medium">Nanopore Lab, IISc, Bengaluru, India</p>
                 </div>
               </div>
             </div>

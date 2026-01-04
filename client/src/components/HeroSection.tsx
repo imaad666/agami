@@ -19,13 +19,13 @@ export default function HeroSection() {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: "brightness(1.3) contrast(0.9) saturate(0.3)" }}
+        style={{ filter: "brightness(1.8) contrast(0.85) saturate(0.2)" }}
         data-testid="video-background"
       >
         <source src={backgroundVideo} type="video/webm" />
       </video>
       
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white/70" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <Badge variant="outline" className="mb-6 px-4 py-1.5 border-[#4169E1] text-[#4169E1] bg-[#4169E1]/10">
