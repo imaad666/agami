@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import EcosystemSection from "@/components/EcosystemSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ImpactSection from "@/components/ImpactSection";
+import TrustSection from "@/components/TrustSection";
 import AboutSection from "@/components/AboutSection";
 import MissionSection from "@/components/MissionSection";
 import TeamSection from "@/components/TeamSection";
@@ -17,6 +18,7 @@ export default function Home() {
         <EcosystemSection />
         <HowItWorksSection />
         <ImpactSection />
+        <TrustSection />
         <AboutSection />
         <MissionSection />
         <TeamSection />

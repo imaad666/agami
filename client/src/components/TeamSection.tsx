@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { User } from "lucide-react";
+import teamPhoto from "@assets/Screenshot_2026-01-05_at_1.50.44_AM_1767558047785.png";
 
 const teamMembers = [
   {
@@ -8,21 +8,27 @@ const teamMembers = [
     name: "Prof. Manoj Varma",
     role: "Founder | R&D Advisor",
     title: "Professor, CeNSE, IISc",
+    initials: "MV",
     bio: "Leading research and development initiatives, bringing decades of expertise in nanoscale engineering and semiconductor physics to drive innovation at AAGAMISEQ.",
+    gradient: "from-blue-500 to-indigo-600",
   },
   {
     id: 2,
     name: "Dr. Divya Mohan Yadav",
     role: "Founder | CEO",
     title: "PhD, CeNSE, IISc",
+    initials: "DY",
     bio: "Spearheading the company's vision and strategic direction, combining deep scientific expertise with entrepreneurial leadership to revolutionize cancer diagnostics.",
+    gradient: "from-cyan-500 to-blue-600",
   },
   {
     id: 3,
     name: "Muddukrishna P",
     role: "Founder | CPO",
     title: "Research Engineer, CeNSE, IISc",
+    initials: "MP",
     bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
+    gradient: "from-purple-500 to-pink-600",
   },
 ];
 
@@ -37,13 +43,22 @@ export default function TeamSection() {
           </p>
         </div>
 
+        <div className="mb-12 flex justify-center">
+          <img 
+            src={teamPhoto} 
+            alt="AagamiSEQ Founding Team" 
+            className="rounded-xl shadow-lg max-w-full h-auto max-h-80 object-contain"
+            data-testid="img-team-photo"
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
             <Card key={member.id} className="p-6 text-center" data-testid={`card-team-member-${member.id}`}>
               <div className="flex justify-center mb-4">
-                <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
-                  <AvatarFallback className="bg-gradient-to-br from-[#4169E1]/20 to-[#00BCD4]/20">
-                    <User className="w-10 h-10 text-[#4169E1]" />
+                <Avatar className="w-20 h-20 border-4 border-background shadow-lg">
+                  <AvatarFallback className={`bg-gradient-to-br ${member.gradient} text-white text-xl font-bold`}>
+                    {member.initials}
                   </AvatarFallback>
                 </Avatar>
               </div>
