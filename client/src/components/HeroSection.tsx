@@ -1,9 +1,23 @@
 import { Button } from "@/components/ui/button";
+import backgroundVideo from "@assets/xyz_1767556898171.webm";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        data-testid="video-background"
+      >
+        <source src={backgroundVideo} type="video/webm" />
+      </video>
+      
+      <div className="absolute inset-0 bg-black/50" />
+      
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="flex justify-center mb-8">
           <svg
             width="48"
@@ -11,7 +25,7 @@ export default function HeroSection() {
             viewBox="0 0 40 40"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="text-primary"
+            className="text-white"
           >
             <path
               d="M20 4L36 32H4L20 4Z"
@@ -22,13 +36,13 @@ export default function HeroSection() {
           </svg>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white">
           Clarity in the Fight{" "}
           <br className="hidden sm:block" />
-          Against <span className="text-primary">Cancer</span>
+          Against <span className="text-cyan-400">Cancer</span>
         </h1>
 
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+        <p className="text-lg text-white/90 max-w-2xl mx-auto mb-10">
           We're making early cancer detection possible with a simple, powerful test. Our
           mission is to empower you and your doctor with the information to act sooner.
         </p>
@@ -36,7 +50,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="px-8"
+            className="px-8 bg-white text-gray-900 hover:bg-white/90"
             data-testid="button-patients-families"
           >
             For Patients & Families
@@ -44,7 +58,7 @@ export default function HeroSection() {
           <Button
             size="lg"
             variant="outline"
-            className="px-8"
+            className="px-8 border-white text-white hover:bg-white/10"
             data-testid="button-medical-professionals"
           >
             For Medical Professionals
