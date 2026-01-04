@@ -15,36 +15,17 @@ export default function HeroSection() {
         <source src={backgroundVideo} type="video/webm" />
       </video>
       
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <div className="flex justify-center mb-8">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-white"
-          >
-            <path
-              d="M20 4L36 32H4L20 4Z"
-              fill="currentColor"
-              stroke="currentColor"
-              strokeWidth="2"
-            />
-          </svg>
-        </div>
-
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white">
-          Clarity in the Fight{" "}
-          <br className="hidden sm:block" />
-          Against <span className="text-cyan-400">Cancer</span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white">
+          AAGAMISEQ Nanopore
+          <br />
+          <span className="text-cyan-400">Diagnostics</span>
         </h1>
 
-        <p className="text-lg text-white/90 max-w-2xl mx-auto mb-10">
-          We're making early cancer detection possible with a simple, powerful test. Our
-          mission is to empower you and your doctor with the information to act sooner.
+        <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10">
+          Detecting molecular signatures with sub-nanometer precision. A paradigm shift in early-stage oncology.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
