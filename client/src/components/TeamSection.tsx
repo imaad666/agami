@@ -5,21 +5,24 @@ import { User } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    name: "Name TBD",
-    role: "Role TBD",
-    bio: "Bio placeholder text. This section will contain a brief description of the team member's background, expertise, and contributions to AAGAMISEQ.",
+    name: "Prof. Manoj Varma",
+    role: "Founder | R&D Advisor",
+    title: "Professor, CeNSE, IISc",
+    bio: "Leading research and development initiatives, bringing decades of expertise in nanoscale engineering and semiconductor physics to drive innovation at AAGAMISEQ.",
   },
   {
     id: 2,
-    name: "Name TBD",
-    role: "Role TBD",
-    bio: "Bio placeholder text. This section will contain a brief description of the team member's background, expertise, and contributions to AAGAMISEQ.",
+    name: "Dr. Divya Mohan Yadav",
+    role: "Founder | CEO",
+    title: "PhD, CeNSE, IISc",
+    bio: "Spearheading the company's vision and strategic direction, combining deep scientific expertise with entrepreneurial leadership to revolutionize cancer diagnostics.",
   },
   {
     id: 3,
-    name: "Name TBD",
-    role: "Role TBD",
-    bio: "Bio placeholder text. This section will contain a brief description of the team member's background, expertise, and contributions to AAGAMISEQ.",
+    name: "Muddukrishna P",
+    role: "Founder | CPO",
+    title: "Research Engineer, CeNSE, IISc",
+    bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
   },
 ];
 
@@ -39,13 +42,14 @@ export default function TeamSection() {
             <Card key={member.id} className="p-6 text-center" data-testid={`card-team-member-${member.id}`}>
               <div className="flex justify-center mb-4">
                 <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
-                  <AvatarFallback className="bg-gradient-to-br from-rose-100 to-rose-200 dark:from-rose-900 dark:to-rose-800">
-                    <User className="w-10 h-10 text-rose-400" />
+                  <AvatarFallback className="bg-gradient-to-br from-[#4169E1]/20 to-[#00BCD4]/20">
+                    <User className="w-10 h-10 text-[#4169E1]" />
                   </AvatarFallback>
                 </Avatar>
               </div>
               <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
-              <p className="text-primary font-medium text-sm mb-4">{member.role}</p>
+              <p className="text-primary font-medium text-sm mb-1">{member.role}</p>
+              <p className="text-muted-foreground text-xs mb-4">{member.title}</p>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {member.bio}
               </p>
