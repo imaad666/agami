@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import backgroundVideo from "@assets/xyz_1767556898171.webm";
 
 export default function HeroSection() {
+  const scrollToContact = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <video
@@ -18,13 +25,9 @@ export default function HeroSection() {
       
       <div className="absolute inset-0 bg-gradient-to-b from-[#4169E1]/40 via-[#0A1533]/60 to-[#00BCD4]/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#E91E8C]/10 via-transparent to-[#00BCD4]/10" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#4169E1]/20 via-transparent to-[#E91E8C]/20" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span className="text-white/90 text-sm">Next-Gen Cancer Diagnostics</span>
-        </div>
-
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white drop-shadow-lg">
           AAGAMISEQ Nanopore
           <br />
@@ -52,6 +55,15 @@ export default function HeroSection() {
             data-testid="button-medical-professionals"
           >
             For Medical Professionals
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={scrollToContact}
+            className="px-8 border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all"
+            data-testid="button-contact-us-hero"
+          >
+            Contact Us
           </Button>
         </div>
       </div>

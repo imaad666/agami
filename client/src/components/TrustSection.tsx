@@ -1,8 +1,11 @@
+import logoIcon from "@assets/Screenshot_2026-01-05_at_1.43.47_AM_1767557632163.png";
+
 export default function TrustSection() {
   return (
     <section className="py-16 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
+          <img src={logoIcon} alt="AagamiSEQ" className="h-12 w-auto mx-auto mb-6" />
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Network of Trust</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Backed by leading research institutions and innovation hubs

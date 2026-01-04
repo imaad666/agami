@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import teamPhoto from "@assets/Screenshot_2026-01-05_at_1.50.44_AM_1767558047785.png";
 
 const teamMembers = [
   {
@@ -41,15 +40,6 @@ export default function TeamSection() {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Our interdisciplinary team combines expertise in quantum physics, semiconductor engineering, and clinical oncology to redefine the future of diagnostics.
           </p>
-        </div>
-
-        <div className="mb-12 flex justify-center">
-          <img 
-            src={teamPhoto} 
-            alt="AagamiSEQ Founding Team" 
-            className="rounded-xl shadow-lg max-w-full h-auto max-h-80 object-contain"
-            data-testid="img-team-photo"
-          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
