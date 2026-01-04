@@ -1,4 +1,4 @@
-import LogoBadge from "./LogoBadge";
+import logoFull from "@assets/Screenshot_2026-01-05_at_1.53.04_AM_1767558189203.png";
 
 export default function Footer() {
   return (
@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="flex justify-center mb-6">
-            <LogoBadge size="md" variant="dark" />
+            <img src={logoFull} alt="AagamiSEQ Technologies" className="h-12 w-auto brightness-0 invert" />
           </div>
           <p className="text-white/70 text-sm mb-6 max-w-md mx-auto">
             Pioneering early cancer detection through advanced nanopore DNA sequencing
