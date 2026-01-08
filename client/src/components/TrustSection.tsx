@@ -1,40 +1,41 @@
 import logoIcon from "@assets/Screenshot_2026-01-05_at_1.43.47_AM_1767557632163.png";
+import ccampLogo from "@assets/DS_1767879001250.jpg";
+import iiscLogo from "@assets/next_iisc_1767879006237.png";
+import meityLogo from "@assets/MeitYStartupHub-Logo-FINAL_5_1_1767879012603.png";
 
 const backers = [
   {
-    name: "IISc Bangalore",
-    shortName: "IISc",
-    subtitle: "Indian Institute of Science",
-    description: "Premier Research Institute",
-    color: "text-[#4169E1]",
+    name: "C-CAMP",
+    description: "Life Sciences Innovation Hub",
+    logo: ccampLogo,
+    hasLogo: true,
   },
   {
-    name: "C-CAMP",
-    shortName: "C-CAMP",
-    subtitle: "Centre for Cellular & Molecular Platforms",
-    description: "Life Sciences Innovation Hub",
-    color: "text-[#00BCD4]",
+    name: "IISc Bangalore",
+    description: "Premier Research Institute",
+    logo: iiscLogo,
+    hasLogo: true,
+    invertInLight: true,
+  },
+  {
+    name: "MeitY Startup Hub",
+    description: "Government Innovation Support",
+    logo: meityLogo,
+    hasLogo: true,
   },
   {
     name: "SID-IISc",
     shortName: "SID",
-    subtitle: "Society for Innovation & Development",
     description: "Technology Transfer & Incubation",
     color: "text-[#9333EA]",
-  },
-  {
-    name: "MeitY Startup Hub",
-    shortName: "MeitY",
-    subtitle: "Ministry of Electronics & IT",
-    description: "Government Innovation Support",
-    color: "text-[#E91E8C]",
+    hasLogo: false,
   },
   {
     name: "INCENSE",
     shortName: "INCENSE",
-    subtitle: "IISc Incubation Centre",
     description: "Deep Tech Incubator",
     color: "text-[#10B981]",
+    hasLogo: false,
   },
 ];
 
@@ -54,11 +55,19 @@ export default function TrustSection() {
 
         <div className="flex flex-wrap justify-center items-start gap-8 md:gap-12">
           {backers.map((backer, index) => (
-            <div key={index} className="flex flex-col items-center gap-3 w-36" data-testid={`backer-${index}`}>
-              <div className="w-20 h-20 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shadow-sm">
-                <div className="text-center px-1">
-                  <div className={`text-lg font-bold ${backer.color}`}>{backer.shortName}</div>
-                </div>
+            <div key={index} className="flex flex-col items-center gap-3 w-40" data-testid={`backer-${index}`}>
+              <div className="w-24 h-24 rounded-xl bg-white border border-gray-200 flex items-center justify-center shadow-sm overflow-hidden p-2">
+                {backer.hasLogo ? (
+                  <img 
+                    src={backer.logo} 
+                    alt={backer.name} 
+                    className={`w-full h-full object-contain ${backer.invertInLight ? 'dark:invert' : ''}`}
+                  />
+                ) : (
+                  <div className="text-center px-1">
+                    <div className={`text-lg font-bold ${backer.color}`}>{backer.shortName}</div>
+                  </div>
+                )}
               </div>
               <span className="text-sm font-medium text-foreground text-center">{backer.name}</span>
               <span className="text-xs text-muted-foreground text-center">{backer.description}</span>
