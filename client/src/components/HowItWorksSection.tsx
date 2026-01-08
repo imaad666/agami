@@ -55,17 +55,17 @@ export default function HowItWorksSection() {
 
           <div className="flex justify-center">
             <div className="relative bg-background rounded-2xl border p-10 w-full max-w-md shadow-sm">
-              <svg viewBox="0 0 200 300" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="60" y="120" width="80" height="60" rx="4" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="2" />
+              <svg viewBox="0 0 200 280" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="60" y="110" width="80" height="60" rx="4" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="2" />
                 
-                <rect x="90" y="120" width="20" height="60" fill="hsl(var(--background))" />
-                <line x1="90" y1="120" x2="90" y2="180" stroke="#4169E1" strokeWidth="2" />
-                <line x1="110" y1="120" x2="110" y2="180" stroke="#4169E1" strokeWidth="2" />
+                <rect x="90" y="110" width="20" height="60" fill="hsl(var(--background))" />
+                <line x1="90" y1="110" x2="90" y2="170" stroke="#4169E1" strokeWidth="2" />
+                <line x1="110" y1="110" x2="110" y2="170" stroke="#4169E1" strokeWidth="2" />
                 
-                <circle cx="100" cy="50" r="12" fill="#4169E1">
+                <circle cx="100" cy="40" r="12" fill="#4169E1">
                   <animate 
                     attributeName="cy" 
-                    values="50;150;250" 
+                    values="40;140;240" 
                     dur="2s" 
                     repeatCount="indefinite"
                     keyTimes="0;0.5;1"
@@ -81,16 +81,10 @@ export default function HowItWorksSection() {
                   />
                 </circle>
                 
-                <text x="100" y="290" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="500">
+                <text x="100" y="270" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="11" fontWeight="500">
                   NANOPORE TRANSLOCATION
                 </text>
               </svg>
-              
-              <div className="absolute bottom-6 right-6 text-right">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">RESOLUTION</p>
-                <p className="text-3xl font-bold text-foreground">0.1</p>
-                <p className="text-lg font-semibold text-[#4169E1]">Nanometers</p>
-              </div>
             </div>
           </div>
         </div>
