@@ -42,25 +42,25 @@ const impactItems = [
 
 export default function ImpactSection() {
   return (
-    <section id="impact" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="impact" className="py-24 bg-background">
+      <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-4">Driving Global Impact</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-6">Driving Global Impact</h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             We are bridging the gap between cutting-edge biophysics and everyday medical practice.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {impactItems.map((item, index) => (
-            <div key={index} className="text-center" data-testid={`card-impact-${index}`}>
-              <div className={`inline-flex p-4 rounded-xl ${item.iconBg} mb-4`}>
-                <item.icon className={`w-8 h-8 ${item.iconColor}`} />
+            <div key={index} className="flex flex-col items-center text-center h-full" data-testid={`card-impact-${index}`}>
+              <div className={`inline-flex p-5 rounded-xl ${item.iconBg} mb-5`}>
+                <item.icon className={`w-10 h-10 ${item.iconColor}`} />
               </div>
-              <p className={`text-xs font-semibold tracking-wider mb-2 ${item.labelColor}`}>{item.label}</p>
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-muted-foreground text-sm mb-6 leading-relaxed">{item.description}</p>
-              <Badge variant="secondary" className={`${item.statBg} ${item.statColor} border-0 px-4 py-2 text-sm font-semibold`}>
+              <p className={`text-xs font-semibold tracking-wider mb-3 ${item.labelColor}`}>{item.label}</p>
+              <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+              <p className="text-muted-foreground text-base mb-8 leading-relaxed flex-grow">{item.description}</p>
+              <Badge variant="secondary" className={`${item.statBg} ${item.statColor} border-0 px-5 py-2.5 text-sm font-semibold`}>
                 {item.stat}
               </Badge>
             </div>

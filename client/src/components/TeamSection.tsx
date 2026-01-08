@@ -24,7 +24,7 @@ const teamMembers = [
     id: 3,
     name: "Muddukrishna P",
     role: "Founder | CPO",
-    title: "Research Engineer, CeNSE, IISc",
+    title: "Senior Project Associate, CeNSE, IISc",
     initials: "MP",
     bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
     gradient: "from-purple-500 to-pink-600",
@@ -33,29 +33,29 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="team" className="py-24 bg-background">
+      <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-4">The Minds Behind the Innovation</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-6">The Minds Behind the Innovation</h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Our interdisciplinary team combines expertise in quantum physics, semiconductor engineering, and clinical oncology to redefine the future of diagnostics.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {teamMembers.map((member) => (
-            <Card key={member.id} className="p-6 text-center" data-testid={`card-team-member-${member.id}`}>
-              <div className="flex justify-center mb-4">
-                <Avatar className="w-20 h-20 border-4 border-background shadow-lg">
-                  <AvatarFallback className={`bg-gradient-to-br ${member.gradient} text-white text-xl font-bold`}>
+            <Card key={member.id} className="p-8 text-center h-full flex flex-col" data-testid={`card-team-member-${member.id}`}>
+              <div className="flex justify-center mb-6">
+                <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
+                  <AvatarFallback className={`bg-gradient-to-br ${member.gradient} text-white text-2xl font-bold`}>
                     {member.initials}
                   </AvatarFallback>
                 </Avatar>
               </div>
-              <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
-              <p className="text-primary font-medium text-sm mb-1">{member.role}</p>
-              <p className="text-muted-foreground text-xs mb-4">{member.title}</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+              <p className="text-primary font-medium mb-2">{member.role}</p>
+              <p className="text-muted-foreground text-sm mb-5">{member.title}</p>
+              <p className="text-muted-foreground leading-relaxed flex-grow">
                 {member.bio}
               </p>
             </Card>

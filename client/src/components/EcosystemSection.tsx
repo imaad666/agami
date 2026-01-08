@@ -10,6 +10,7 @@ const ecosystemItems = [
     features: ["Pico-ampere sensitivity", "Multi-channel I/O", "Compact benchtop form factor"],
     color: "text-rose-500",
     bgColor: "bg-rose-500/10",
+    bulletColor: "bg-rose-500",
   },
   {
     icon: Layers,
@@ -19,6 +20,7 @@ const ecosystemItems = [
     features: ["Custom pore diameters", "High durability", "Sub-nanometer precision"],
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
+    bulletColor: "bg-blue-500",
   },
   {
     icon: Brain,
@@ -28,6 +30,7 @@ const ecosystemItems = [
     features: ["Real-time functionality", "Automated anomaly detection", "Clinical reporting dashboard"],
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
+    bulletColor: "bg-emerald-500",
   },
   {
     icon: Package,
@@ -37,33 +40,34 @@ const ecosystemItems = [
     features: ["Fast sample prep", "High stability reagents", "Lot-to-lot consistency"],
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
+    bulletColor: "bg-violet-500",
   },
 ];
 
 export default function EcosystemSection() {
   return (
-    <section id="ecosystem" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="ecosystem" className="py-24 bg-background">
+      <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-4">Our Ecosystem</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-6">Our Ecosystem</h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             We provide a complete, integrated solution for single-molecule sensing, from the physical sensor to the final clinical insight.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {ecosystemItems.map((item, index) => (
-            <Card key={index} className="p-6" data-testid={`card-ecosystem-${index}`}>
-              <div className={`inline-flex p-3 rounded-lg ${item.bgColor} mb-4`}>
+            <Card key={index} className="p-6 h-full flex flex-col" data-testid={`card-ecosystem-${index}`}>
+              <div className={`inline-flex p-3 rounded-lg ${item.bgColor} mb-4 self-start`}>
                 <item.icon className={`w-6 h-6 ${item.color}`} />
               </div>
-              <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className={`text-sm ${item.color} mb-3`}>{item.subtitle}</p>
-              <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
-              <ul className="space-y-1">
+              <p className="text-muted-foreground text-sm mb-5 flex-grow">{item.description}</p>
+              <ul className="space-y-2">
                 {item.features.map((feature, idx) => (
-                  <li key={idx} className="text-xs text-muted-foreground flex items-center gap-2">
-                    <span className={`w-1 h-1 rounded-full ${item.color.replace('text-', 'bg-')}`} />
+                  <li key={idx} className="text-sm text-muted-foreground flex items-center gap-3">
+                    <span className={`w-1.5 h-1.5 rounded-full ${item.bulletColor} flex-shrink-0`} />
                     {feature}
                   </li>
                 ))}
