@@ -58,6 +58,25 @@ export default function HowItWorksSection() {
               <svg viewBox="0 0 200 280" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="60" y="110" width="80" height="60" rx="4" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="2" />
                 
+                <rect x="60" y="110" width="30" height="60" rx="2" fill="hsl(var(--muted))">
+                  <animate 
+                    attributeName="fill" 
+                    values="hsl(var(--muted));hsl(var(--muted));#C71585;#C71585;hsl(var(--muted))" 
+                    keyTimes="0;0.4;0.5;0.7;0.8"
+                    dur="2s" 
+                    repeatCount="indefinite"
+                  />
+                </rect>
+                <rect x="110" y="110" width="30" height="60" rx="2" fill="hsl(var(--muted))">
+                  <animate 
+                    attributeName="fill" 
+                    values="hsl(var(--muted));hsl(var(--muted));#C71585;#C71585;hsl(var(--muted))" 
+                    keyTimes="0;0.45;0.55;0.75;0.85"
+                    dur="2s" 
+                    repeatCount="indefinite"
+                  />
+                </rect>
+                
                 <rect x="90" y="110" width="20" height="60" fill="hsl(var(--background))" />
                 <line x1="90" y1="110" x2="90" y2="170" stroke="#4169E1" strokeWidth="2" />
                 <line x1="110" y1="110" x2="110" y2="170" stroke="#4169E1" strokeWidth="2" />
