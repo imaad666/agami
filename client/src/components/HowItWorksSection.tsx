@@ -55,44 +55,35 @@ export default function HowItWorksSection() {
 
           <div className="flex justify-center">
             <div className="relative bg-background rounded-2xl border p-10 w-full max-w-md shadow-sm">
-              <svg viewBox="0 0 280 320" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="140" cy="40" r="24" fill="#4169E1" opacity="0.2">
-                  <animate attributeName="cy" values="40;80;40" dur="2.5s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="140" cy="40" r="14" fill="#4169E1" opacity="0.5">
-                  <animate attributeName="cy" values="40;80;40" dur="2.5s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="140" cy="40" r="6" fill="#4169E1">
-                  <animate attributeName="cy" values="40;80;40" dur="2.5s" repeatCount="indefinite" />
+              <svg viewBox="0 0 200 300" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="60" y="120" width="80" height="60" rx="4" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="2" />
+                
+                <rect x="90" y="120" width="20" height="60" fill="hsl(var(--background))" />
+                <line x1="90" y1="120" x2="90" y2="180" stroke="#4169E1" strokeWidth="2" />
+                <line x1="110" y1="120" x2="110" y2="180" stroke="#4169E1" strokeWidth="2" />
+                
+                <circle cx="100" cy="50" r="12" fill="#4169E1">
+                  <animate 
+                    attributeName="cy" 
+                    values="50;150;250" 
+                    dur="2s" 
+                    repeatCount="indefinite"
+                    keyTimes="0;0.5;1"
+                    calcMode="spline"
+                    keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"
+                  />
+                  <animate 
+                    attributeName="r" 
+                    values="12;8;12" 
+                    dur="2s" 
+                    repeatCount="indefinite"
+                    keyTimes="0;0.5;1"
+                  />
                 </circle>
                 
-                <line x1="140" y1="100" x2="140" y2="130" stroke="#4169E1" strokeWidth="3" strokeDasharray="6,4">
-                  <animate attributeName="stroke-dashoffset" values="0;10" dur="0.4s" repeatCount="indefinite" />
-                </line>
-                
-                <rect x="40" y="130" width="200" height="40" rx="6" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="2" />
-                <rect x="120" y="130" width="40" height="40" fill="hsl(var(--background))" stroke="#4169E1" strokeWidth="2" />
-                <circle cx="140" cy="150" r="10" fill="#4169E1" opacity="0.3" />
-                <circle cx="140" cy="150" r="5" fill="#4169E1" />
-                
-                <circle cx="70" cy="150" r="4" fill="hsl(var(--muted-foreground))" opacity="0.4" />
-                <circle cx="95" cy="150" r="4" fill="hsl(var(--muted-foreground))" opacity="0.4" />
-                <circle cx="185" cy="150" r="4" fill="hsl(var(--muted-foreground))" opacity="0.4" />
-                <circle cx="210" cy="150" r="4" fill="hsl(var(--muted-foreground))" opacity="0.4" />
-                
-                <line x1="140" y1="170" x2="140" y2="200" stroke="#00BCD4" strokeWidth="3" strokeDasharray="6,4">
-                  <animate attributeName="stroke-dashoffset" values="0;10" dur="0.4s" repeatCount="indefinite" />
-                </line>
-                
-                <circle cx="140" cy="240" r="20" fill="#00BCD4" opacity="0.2">
-                  <animate attributeName="cy" values="220;260;220" dur="2s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="140" cy="240" r="12" fill="#00BCD4" opacity="0.4">
-                  <animate attributeName="cy" values="220;260;220" dur="2s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="140" cy="240" r="5" fill="#00BCD4">
-                  <animate attributeName="cy" values="220;260;220" dur="2s" repeatCount="indefinite" />
-                </circle>
+                <text x="100" y="290" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="500">
+                  NANOPORE TRANSLOCATION
+                </text>
               </svg>
               
               <div className="absolute bottom-6 right-6 text-right">
