@@ -1,5 +1,9 @@
 import { Card } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+import manojVarmaImg from "@assets/Manoj_varma_1767878481292.png";
+import divyaYadavImg from "@assets/dr_divya_1767878460060.png";
+import muddukrishnaImg from "@assets/muddu_bhaiya_1767878464750.jpg";
 
 const teamMembers = [
   {
@@ -8,6 +12,7 @@ const teamMembers = [
     role: "Founder | R&D Advisor",
     title: "Professor, CeNSE, IISc",
     initials: "MV",
+    image: manojVarmaImg,
     bio: "Leading research and development initiatives, bringing decades of expertise in nanoscale engineering and semiconductor physics to drive innovation at AAGAMISEQ.",
     gradient: "from-blue-500 to-indigo-600",
   },
@@ -17,6 +22,7 @@ const teamMembers = [
     role: "Founder | CEO",
     title: "PhD, CeNSE, IISc",
     initials: "DY",
+    image: divyaYadavImg,
     bio: "Spearheading the company's vision and strategic direction, combining deep scientific expertise with entrepreneurial leadership to revolutionize cancer diagnostics.",
     gradient: "from-cyan-500 to-blue-600",
   },
@@ -26,6 +32,7 @@ const teamMembers = [
     role: "Founder | CPO",
     title: "Senior Project Associate, CeNSE, IISc",
     initials: "MP",
+    image: muddukrishnaImg,
     bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
     gradient: "from-purple-500 to-pink-600",
   },
@@ -46,7 +53,8 @@ export default function TeamSection() {
           {teamMembers.map((member) => (
             <Card key={member.id} className="p-8 text-center h-full flex flex-col" data-testid={`card-team-member-${member.id}`}>
               <div className="flex justify-center mb-6">
-                <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
+                <Avatar className="w-28 h-28 border-4 border-background shadow-lg">
+                  <AvatarImage src={member.image} alt={member.name} className="object-cover" />
                   <AvatarFallback className={`bg-gradient-to-br ${member.gradient} text-white text-2xl font-bold`}>
                     {member.initials}
                   </AvatarFallback>
