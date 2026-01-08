@@ -27,19 +27,6 @@ export default function HeroSection() {
       
       <div className="absolute inset-0 bg-white/30" />
       
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-        <svg width="200" height="120" viewBox="0 0 200 120" className="opacity-40">
-          <line x1="100" y1="0" x2="100" y2="50" stroke="#4169E1" strokeWidth="3" strokeDasharray="4,4">
-            <animate attributeName="stroke-dashoffset" values="0;8" dur="0.5s" repeatCount="indefinite" />
-          </line>
-          <rect x="70" y="50" width="60" height="20" rx="4" fill="none" stroke="#4169E1" strokeWidth="2" />
-          <circle cx="100" cy="60" r="6" fill="#4169E1" />
-          <line x1="100" y1="70" x2="100" y2="120" stroke="#4169E1" strokeWidth="3" strokeDasharray="4,4">
-            <animate attributeName="stroke-dashoffset" values="0;8" dur="0.5s" repeatCount="indefinite" />
-          </line>
-        </svg>
-      </div>
-      
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
         <Badge variant="outline" className="mb-8 px-5 py-2 border-[#4169E1] text-[#4169E1] bg-[#4169E1]/10 text-sm">
           PRECISION DIAGNOSTICS

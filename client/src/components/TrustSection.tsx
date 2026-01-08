@@ -5,17 +5,17 @@ import meityLogo from "@assets/MeitYStartupHub-Logo-FINAL_5_1_1767879012603.png"
 
 const backers = [
   {
-    name: "C-CAMP",
-    description: "Life Sciences Innovation Hub",
-    logo: ccampLogo,
-    hasLogo: true,
-  },
-  {
     name: "IISc Bangalore",
     description: "Premier Research Institute",
     logo: iiscLogo,
     hasLogo: true,
     invertInLight: true,
+  },
+  {
+    name: "C-CAMP",
+    description: "Life Sciences Innovation Hub",
+    logo: ccampLogo,
+    hasLogo: true,
   },
   {
     name: "MeitY Startup Hub",
@@ -44,9 +44,7 @@ export default function TrustSection() {
     <section className="py-24 bg-white dark:bg-background">
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-14">
-          <div className="inline-block bg-white p-3 rounded-lg mb-6">
-            <img src={logoIcon} alt="AagamiSEQ" className="h-14 w-auto" />
-          </div>
+          <img src={logoIcon} alt="AagamiSEQ" className="h-14 w-auto mx-auto mb-6" />
           <h2 className="text-4xl sm:text-5xl font-semibold mb-6">Network of Trust</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Backed by leading research institutions and innovation hubs

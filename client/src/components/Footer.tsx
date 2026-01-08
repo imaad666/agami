@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin } from "lucide-react";
-import logoFull from "@assets/Screenshot_2026-01-05_at_1.53.04_AM_1767558189203.png";
 
 export default function Footer() {
   return (
@@ -81,9 +80,9 @@ export default function Footer() {
         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-10" />
 
         <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <img src={logoFull} alt="AagamiSEQ Technologies" className="h-14 w-auto brightness-0 invert" />
-          </div>
+          <h3 className="text-2xl font-bold mb-2">
+            <span className="text-[#1e3a5f]">AAGAMI</span><span className="text-[#C71585]">SEQ</span>
+          </h3>
           <p className="text-white/60 text-base mb-5 max-w-lg mx-auto">
             Pioneering early cancer detection through advanced nanopore DNA sequencing technology.
           </p>
