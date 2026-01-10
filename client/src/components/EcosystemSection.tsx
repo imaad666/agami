@@ -62,21 +62,28 @@ export default function EcosystemSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {ecosystemItems.map((item, index) => (
-            <Card key={index} className="p-6 h-full flex flex-col" data-testid={`card-ecosystem-${index}`}>
-              <div className={`inline-flex p-3 rounded-lg ${item.bgColor} mb-4 self-start`}>
-                <item.icon className={`w-6 h-6 ${item.color}`} />
+            <Card key={index} className="p-6 flex flex-col h-[420px]" data-testid={`card-ecosystem-${index}`}>
+              {/* Top section: Icon + Title + Subtitle + Description */}
+              <div className="flex-shrink-0">
+                <div className={`inline-flex p-3 rounded-lg ${item.bgColor} mb-4`}>
+                  <item.icon className={`w-6 h-6 ${item.color}`} />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 leading-tight">{item.title}</h3>
+                <p className={`text-sm ${item.color} mb-3 leading-snug`}>{item.subtitle}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed h-[72px]">{item.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className={`text-sm ${item.color} mb-3`}>{item.subtitle}</p>
-              <p className="text-muted-foreground text-sm mb-5 flex-grow">{item.description}</p>
-              <ul className="space-y-2 mb-6">
+              
+              {/* Middle section: Bullet points at consistent position */}
+              <ul className="space-y-2 mt-4 flex-shrink-0">
                 {item.features.map((feature, idx) => (
-                  <li key={idx} className="text-sm text-muted-foreground flex items-center gap-3">
+                  <li key={idx} className="text-sm text-muted-foreground flex items-center gap-3 leading-snug">
                     <span className={`w-1.5 h-1.5 rounded-full ${item.bulletColor} flex-shrink-0`} />
                     {feature}
                   </li>
                 ))}
               </ul>
+              
+              {/* Bottom section: CTA pinned to bottom */}
               <Button 
                 variant={item.buttonText === "Contact Sales" ? "default" : "outline"}
                 className="w-full mt-auto"
