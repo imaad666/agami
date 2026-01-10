@@ -40,7 +40,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Anumol Dominic",
-    role: "Founder | Lead Fabrication Engg",
+    role: "Lead Fabrication Engg",
     title: "",
     initials: "AD",
     image: anumolImg,
@@ -62,7 +62,7 @@ export default function TeamSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
-            <Card key={member.id} className="p-6 text-center h-full flex flex-col" data-testid={`card-team-member-${member.id}`}>
+            <Card key={member.id} className="p-6 h-full flex flex-col" data-testid={`card-team-member-${member.id}`}>
               <div className="flex justify-center mb-5">
                 <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
                   {member.image ? (
@@ -73,11 +73,12 @@ export default function TeamSection() {
                   </AvatarFallback>
                 </Avatar>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{member.name}</h3>
-              <p className="text-primary font-medium text-sm mb-1">{member.role}</p>
-              {member.title && <p className="text-muted-foreground text-xs mb-4">{member.title}</p>}
-              {!member.title && <div className="mb-4" />}
-              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+              <h3 className="text-lg font-semibold mb-2 text-center">{member.name}</h3>
+              <p className="text-primary font-medium text-sm mb-1 text-center">{member.role}</p>
+              <div className="h-5 mb-4">
+                {member.title && <p className="text-muted-foreground text-xs text-center">{member.title}</p>}
+              </div>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow text-left">
                 {member.bio}
               </p>
             </Card>
