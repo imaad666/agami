@@ -22,13 +22,13 @@ export default function HeroSection() {
           PRECISION DIAGNOSTICS
         </Badge>
 
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-[#0D1B2A]" style={{ marginTop: '2px' }}>
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-[#0D1B2A]" style={{ marginTop: '4px' }}>
           <span className="text-[#1e3a5f]">AAGAMI</span><span className="text-[#C71585]">SEQ</span> Nanopore
           <br />
           Diagnostics
         </h1>
 
-        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto" style={{ marginTop: '3px' }}>
+        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto" style={{ marginTop: '8px' }}>
           Detecting molecular signatures with sub-nanometer precision. A paradigm shift in early-stage oncology.
         </p>
       </div>

@@ -1,18 +1,10 @@
 import logoIcon from "@assets/Screenshot_2026-01-05_at_1.43.47_AM_1767557632163.png";
 import ccampLogo from "@assets/DS_1767879001250.jpg";
-import iiscLogo from "@assets/next_iisc_1767879006237.png";
 import meityLogo from "@assets/MeitYStartupHub-Logo-FINAL_5_1_1767879012603.png";
 import sidLogo from "@assets/iisc_sid_1767879536206.png";
 import incenseLogo from "@assets/incense_1767879539524.jpeg";
 
 const backers = [
-  {
-    name: "IISc Bangalore",
-    description: "Premier Research Institute",
-    logo: iiscLogo,
-    hasLogo: true,
-    invertInLight: true,
-  },
   {
     name: "C-CAMP",
     description: "Life Sciences Innovation Hub",
@@ -58,7 +50,7 @@ export default function TrustSection() {
                 <img 
                   src={backer.logo} 
                   alt={backer.name} 
-                  className={`w-full h-full object-contain ${backer.invertInLight ? 'dark:invert' : ''}`}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <span className="text-sm font-medium text-foreground text-center">{backer.name}</span>
