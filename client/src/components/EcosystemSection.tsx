@@ -66,20 +66,22 @@ export default function EcosystemSection() {
               <div className={`inline-flex p-3 rounded-lg ${item.bgColor} mb-4 self-start`}>
                 <item.icon className={`w-6 h-6 ${item.color}`} />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className={`text-sm ${item.color} mb-3`}>{item.subtitle}</p>
-              <p className="text-muted-foreground text-sm mb-5 min-h-[4.5rem]">{item.description}</p>
-              <ul className="space-y-2 mb-6 flex-grow">
-                {item.features.map((feature, idx) => (
-                  <li key={idx} className="text-sm text-muted-foreground flex items-center gap-3">
-                    <span className={`w-1.5 h-1.5 rounded-full ${item.bulletColor} flex-shrink-0`} />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-semibold mb-2 min-h-[3.5rem] flex items-start">{item.title}</h3>
+              <p className={`text-sm ${item.color} mb-3 min-h-[1.25rem]`}>{item.subtitle}</p>
+              <p className="text-muted-foreground text-sm mb-5 min-h-[5rem]">{item.description}</p>
+              <div className="flex-grow">
+                <ul className="space-y-2 mb-6">
+                  {item.features.map((feature, idx) => (
+                    <li key={idx} className="text-sm text-muted-foreground flex items-center gap-3">
+                      <span className={`w-1.5 h-1.5 rounded-full ${item.bulletColor} flex-shrink-0`} />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <Button 
                 variant={item.buttonText === "Contact Sales" ? "default" : "outline"}
-                className="w-full mt-auto"
+                className="w-full"
                 data-testid={`button-ecosystem-${index}`}
               >
                 {item.buttonText}
