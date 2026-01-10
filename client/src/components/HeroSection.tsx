@@ -3,7 +3,7 @@ import backgroundVideo from "@assets/aagamiseq-full-nanopore-loop_(2)_1768023664
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-start justify-center overflow-hidden pt-32 sm:pt-40">
       <video
         autoPlay
         loop
@@ -17,7 +17,7 @@ export default function HeroSection() {
       
       <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/30" />
       
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <Badge variant="outline" className="mb-8 px-5 py-2 border-[#4169E1] text-[#4169E1] bg-[#4169E1]/10 text-sm">
           PRECISION DIAGNOSTICS
         </Badge>
@@ -28,7 +28,7 @@ export default function HeroSection() {
           Diagnostics
         </h1>
 
-        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto mb-16">
+        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto">
           Detecting molecular signatures with sub-nanometer precision. A paradigm shift in early-stage oncology.
         </p>
       </div>

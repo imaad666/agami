@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Cpu, Layers, Brain, Package } from "lucide-react";
 
 const ecosystemItems = [
@@ -11,6 +12,7 @@ const ecosystemItems = [
     color: "text-rose-500",
     bgColor: "bg-rose-500/10",
     bulletColor: "bg-rose-500",
+    buttonText: "Coming Soon",
   },
   {
     icon: Layers,
@@ -21,6 +23,7 @@ const ecosystemItems = [
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
     bulletColor: "bg-blue-500",
+    buttonText: "Contact Sales",
   },
   {
     icon: Brain,
@@ -31,6 +34,7 @@ const ecosystemItems = [
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
     bulletColor: "bg-emerald-500",
+    buttonText: "Coming Soon",
   },
   {
     icon: Package,
@@ -41,6 +45,7 @@ const ecosystemItems = [
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
     bulletColor: "bg-violet-500",
+    buttonText: "Coming Soon",
   },
 ];
 
@@ -64,7 +69,7 @@ export default function EcosystemSection() {
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className={`text-sm ${item.color} mb-3`}>{item.subtitle}</p>
               <p className="text-muted-foreground text-sm mb-5 flex-grow">{item.description}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6">
                 {item.features.map((feature, idx) => (
                   <li key={idx} className="text-sm text-muted-foreground flex items-center gap-3">
                     <span className={`w-1.5 h-1.5 rounded-full ${item.bulletColor} flex-shrink-0`} />
@@ -72,6 +77,13 @@ export default function EcosystemSection() {
                   </li>
                 ))}
               </ul>
+              <Button 
+                variant={item.buttonText === "Contact Sales" ? "default" : "outline"}
+                className="w-full mt-auto"
+                data-testid={`button-ecosystem-${index}`}
+              >
+                {item.buttonText}
+              </Button>
             </Card>
           ))}
         </div>
