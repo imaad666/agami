@@ -26,7 +26,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-white/40 uppercase tracking-wider mb-1">EMAIL US</p>
-                  <p className="text-white text-lg font-medium">contact@aagamiseq.io</p>
+                  <p className="text-white text-lg font-medium">contact@aagmiseq.com</p>
                 </div>
               </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-white/40 uppercase tracking-wider mb-1">OUR HEADQUARTERS</p>
-                  <p className="text-white text-lg font-medium">Nanopore Lab, IISc, Bengaluru, India</p>
+                  <p className="text-white text-lg font-medium">INCeNSE Office, CeNSE, IISc, Bengaluru, Karnataka 560012</p>
                 </div>
               </div>
             </div>

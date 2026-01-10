@@ -1,16 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChevronDown } from "lucide-react";
 import backgroundVideo from "@assets/xyz_1767556898171.webm";
 
 export default function HeroSection() {
-  const scrollToNextSection = () => {
-    const ecosystem = document.getElementById('ecosystem');
-    if (ecosystem) {
-      ecosystem.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <video
@@ -38,19 +29,9 @@ export default function HeroSection() {
           Diagnostics
         </h1>
 
-        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto mb-12">
+        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto mb-16">
           Detecting molecular signatures with sub-nanometer precision. A paradigm shift in early-stage oncology.
         </p>
-
-        <Button
-          size="lg"
-          onClick={scrollToNextSection}
-          className="px-10 py-6 text-lg bg-[#4169E1] text-white border-0 shadow-lg"
-          data-testid="button-discover-tech"
-        >
-          Discover our tech
-          <ChevronDown className="w-5 h-5 ml-2" />
-        </Button>
       </div>
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">

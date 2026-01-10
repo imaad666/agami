@@ -36,6 +36,16 @@ const teamMembers = [
     bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
     gradient: "from-purple-500 to-pink-600",
   },
+  {
+    id: 4,
+    name: "Anumol Dominic",
+    role: "Founder",
+    title: "",
+    initials: "AD",
+    image: null,
+    bio: "Contributing expertise to the founding team and helping shape the company's mission to transform early cancer detection.",
+    gradient: "from-rose-500 to-orange-500",
+  },
 ];
 
 export default function TeamSection() {
@@ -49,21 +59,24 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
-            <Card key={member.id} className="p-8 text-center h-full flex flex-col" data-testid={`card-team-member-${member.id}`}>
-              <div className="flex justify-center mb-6">
-                <Avatar className="w-28 h-28 border-4 border-background shadow-lg">
-                  <AvatarImage src={member.image} alt={member.name} className="object-cover" />
-                  <AvatarFallback className={`bg-gradient-to-br ${member.gradient} text-white text-2xl font-bold`}>
+            <Card key={member.id} className="p-6 text-center h-full flex flex-col" data-testid={`card-team-member-${member.id}`}>
+              <div className="flex justify-center mb-5">
+                <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
+                  {member.image ? (
+                    <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+                  ) : null}
+                  <AvatarFallback className={`bg-gradient-to-br ${member.gradient} text-white text-xl font-bold`}>
                     {member.initials}
                   </AvatarFallback>
                 </Avatar>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-primary font-medium mb-2">{member.role}</p>
-              <p className="text-muted-foreground text-sm mb-5">{member.title}</p>
-              <p className="text-muted-foreground leading-relaxed flex-grow">
+              <h3 className="text-lg font-semibold mb-2">{member.name}</h3>
+              <p className="text-primary font-medium text-sm mb-1">{member.role}</p>
+              {member.title && <p className="text-muted-foreground text-xs mb-4">{member.title}</p>}
+              {!member.title && <div className="mb-4" />}
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
                 {member.bio}
               </p>
             </Card>
