@@ -44,7 +44,7 @@ const teamMembers = [
     title: "",
     initials: "AD",
     image: anumolImg,
-    bio: "Develops and optimizes nanopore chips, ensuring reliable fabrication, reproducibility, and production.",
+    bio: "Driving nanopore chip development and process optimization end-to-end, ensuring reliable fabrication, reproducibility, and scalable, production-ready performance.",
     gradient: "from-rose-500 to-orange-500",
   },
 ];
@@ -60,9 +60,9 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           {teamMembers.map((member) => (
-            <Card key={member.id} className="p-6 h-full flex flex-col" data-testid={`card-team-member-${member.id}`}>
+            <Card key={member.id} className="p-6 flex flex-col" data-testid={`card-team-member-${member.id}`}>
               <div className="flex justify-center mb-5">
                 <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
                   {member.image ? (
@@ -73,14 +73,17 @@ export default function TeamSection() {
                   </AvatarFallback>
                 </Avatar>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-center">{member.name}</h3>
-              <p className="text-primary font-medium text-sm mb-1 text-center">{member.role}</p>
-              <div className="h-5 mb-4">
-                {member.title && <p className="text-muted-foreground text-xs text-center">{member.title}</p>}
+              
+              <div className="flex flex-col flex-grow">
+                <h3 className="text-lg font-semibold text-center h-6 flex items-center justify-center">{member.name}</h3>
+                <p className="text-primary font-medium text-sm text-center h-5 flex items-center justify-center mt-2">{member.role}</p>
+                <p className="text-muted-foreground text-xs text-center h-4 flex items-center justify-center mt-1">
+                  {member.title || "\u00A0"}
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed text-left mt-4 flex-grow">
+                  {member.bio}
+                </p>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed flex-grow text-left">
-                {member.bio}
-              </p>
             </Card>
           ))}
         </div>
