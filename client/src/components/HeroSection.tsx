@@ -17,18 +17,18 @@ export default function HeroSection() {
       
       <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/30" />
       
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center" style={{ marginTop: '15px' }}>
         <Badge variant="outline" className="mb-8 px-5 py-2 border-[#4169E1] text-[#4169E1] bg-[#4169E1]/10 text-sm">
           PRECISION DIAGNOSTICS
         </Badge>
 
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-[#0D1B2A]" style={{ marginTop: '4px' }}>
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-[#0D1B2A]">
           <span className="text-[#1e3a5f]">AAGAMI</span><span className="text-[#C71585]">SEQ</span> Nanopore
           <br />
           Diagnostics
         </h1>
 
-        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto" style={{ marginTop: '8px' }}>
+        <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto">
           Detecting molecular signatures with sub-nanometer precision. A paradigm shift in early-stage oncology.
         </p>
       </div>
