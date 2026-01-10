@@ -31,7 +31,7 @@ const teamMembers = [
     id: 3,
     name: "Muddukrishna P",
     role: "Founder | CPO",
-    title: "MTech, CeNSE",
+    title: "Senior Project Associate, CeNSE",
     initials: "MP",
     image: muddukrishnaImg,
     bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
