@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import manojVarmaImg from "@assets/Manoj_varma_1767878481292.png";
 import divyaYadavImg from "@assets/dr_divya_1767878460060.png";
-import muddukrishnaImg from "@assets/muddu_bhaiya_1768023014822.jpeg";
+import muddukrishnaImg from "@assets/muddu_bhaiya_1767878464750.jpg";
 
 const teamMembers = [
   {
@@ -38,12 +38,12 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Dr. Anumol Dominic",
-    role: "Lead Fabrication Engg",
+    name: "Anumol Dominic",
+    role: "Founder",
     title: "",
     initials: "AD",
     image: null,
-    bio: "Develops and optimizes nanopore chips, ensuring reliable fabrication, reproducibility, and production.",
+    bio: "Contributing expertise to the founding team and helping shape the company's mission to transform early cancer detection.",
     gradient: "from-rose-500 to-orange-500",
   },
 ];
