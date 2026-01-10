@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import manojVarmaImg from "@assets/Manoj_varma_1767878481292.png";
-import divyaYadavImg from "@assets/dr_divya_1767878460060.png";
+import divyaYadavImg from "@assets/WhatsApp_Image_2026-01-10_at_11.49.05_AM_1768027444980.jpeg";
 import muddukrishnaImg from "@assets/muddu_bhaiya_1767878464750.jpg";
 import anumolImg from "@assets/WhatsApp_Image_2026-01-10_at_11.19.59_AM_1768024244618.jpeg";
 
