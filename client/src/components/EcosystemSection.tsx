@@ -73,11 +73,10 @@ export default function EcosystemSection() {
                 <p className="text-muted-foreground text-sm leading-relaxed h-[72px]">{item.description}</p>
               </div>
               
-              {/* Middle section: Bullet points at consistent position */}
+              {/* Middle section: Features at consistent position */}
               <ul className="space-y-2 mt-4 flex-shrink-0">
                 {item.features.map((feature, idx) => (
-                  <li key={idx} className="text-sm text-muted-foreground flex items-center gap-3 leading-snug">
-                    <span className={`w-1.5 h-1.5 rounded-full ${item.bulletColor} flex-shrink-0`} />
+                  <li key={idx} className="text-sm text-muted-foreground leading-snug">
                     {feature}
                   </li>
                 ))}
