@@ -1,9 +1,9 @@
 import { Badge } from "@/components/ui/badge";
-import backgroundVideo from "@assets/xyz_1767556898171.webm";
+import backgroundVideo from "@assets/aagamiseq-full-nanopore-loop_(2)_1768023084012.webm";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       <video
         autoPlay
         loop
@@ -18,7 +18,7 @@ export default function HeroSection() {
       
       <div className="absolute inset-0 bg-white/30" />
       
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center flex flex-col items-center justify-center flex-grow">
         <Badge variant="outline" className="mb-8 px-5 py-2 border-[#4169E1] text-[#4169E1] bg-[#4169E1]/10 text-sm">
           PRECISION DIAGNOSTICS
         </Badge>
@@ -29,12 +29,14 @@ export default function HeroSection() {
           Diagnostics
         </h1>
 
+        <div className="h-24 sm:h-32 lg:h-40" />
+
         <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto mb-16">
           Detecting molecular signatures with sub-nanometer precision. A paradigm shift in early-stage oncology.
         </p>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10">
         <div className="w-7 h-12 rounded-full border-2 border-[#4169E1]/40 flex items-start justify-center p-2">
           <div className="w-1.5 h-3 bg-[#4169E1]/60 rounded-full" />
         </div>
