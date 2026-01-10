@@ -8,6 +8,7 @@ import AboutSection from "@/components/AboutSection";
 import MissionSection from "@/components/MissionSection";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
+import SectionDivider from "@/components/SectionDivider";
 
 export default function Home() {
   return (
@@ -15,12 +16,19 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <SectionDivider />
         <EcosystemSection />
+        <SectionDivider />
         <HowItWorksSection />
+        <SectionDivider />
         <ImpactSection />
+        <SectionDivider />
         <TrustSection />
+        <SectionDivider />
         <AboutSection />
+        <SectionDivider />
         <MissionSection />
+        <SectionDivider />
         <TeamSection />
       </main>
       <Footer />
