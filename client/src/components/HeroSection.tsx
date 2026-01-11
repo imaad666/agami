@@ -23,20 +23,14 @@ export default function HeroSection() {
         </Badge>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-[#0D1B2A]">
-          <span className="text-[#1e3a5f]">AAGAMI</span><span className="text-[#C71585]">SEQ</span> Nanopore
+          <span className="text-[#1e3a5f]">AAGAMI</span><span className="text-[#C71585]">SEQ</span>
           <br />
-          Diagnostics
+          <span className="whitespace-nowrap">Nanopore Diagnostics</span>
         </h1>
 
         <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto">
           Detecting molecular signatures with sub-nanometer precision. A paradigm shift in early-stage oncology.
         </p>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-7 h-12 rounded-full border-2 border-[#4169E1]/40 flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-[#4169E1]/60 rounded-full" />
-        </div>
       </div>
     </section>
   );

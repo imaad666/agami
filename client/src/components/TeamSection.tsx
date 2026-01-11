@@ -2,8 +2,8 @@ import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import manojVarmaImg from "@assets/Manoj_varma_1767878481292.png";
-import divyaYadavImg from "@assets/WhatsApp_Image_2026-01-10_at_11.49.05_AM_1768027444980.jpeg";
-import muddukrishnaImg from "@assets/muddu_bhaiya_1768027783767.jpeg";
+import divyaYadavImg from "@assets/Screenshot_2026-01-11_at_5.20.08_PM_1768132239315.png";
+import muddukrishnaImg from "@assets/Screenshot_2026-01-11_at_5.21.54_PM_1768132376646.png";
 import anumolImg from "@assets/WhatsApp_Image_2026-01-10_at_11.19.59_AM_1768024244618.jpeg";
 
 const teamMembers = [
@@ -11,7 +11,6 @@ const teamMembers = [
     id: 1,
     name: "Prof. Manoj Varma",
     role: "Founder | R&D Advisor",
-    title: "Professor, CeNSE",
     initials: "MV",
     image: manojVarmaImg,
     bio: "Leading research and development initiatives, bringing decades of expertise in nanoscale engineering and semiconductor physics to drive innovation at AAGAMISEQ.",
@@ -19,9 +18,8 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Dr. Divya Mohan Yadav",
+    name: "Divya Mohan Yadav, PhD",
     role: "Founder | CEO",
-    title: "PhD, CeNSE",
     initials: "DY",
     image: divyaYadavImg,
     bio: "Spearheading the company's vision and strategic direction, combining deep scientific expertise with entrepreneurial leadership to revolutionize cancer diagnostics.",
@@ -31,7 +29,6 @@ const teamMembers = [
     id: 3,
     name: "Muddukrishna P",
     role: "Founder | CPO",
-    title: "Senior Project Associate, CeNSE",
     initials: "MP",
     image: muddukrishnaImg,
     bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
@@ -39,9 +36,8 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Anumol Dominic",
+    name: "Anumol Dominic, PhD",
     role: "Lead Fabrication Engg",
-    title: "PhD, CeNSE",
     initials: "AD",
     image: anumolImg,
     bio: "Driving nanopore chip development and process optimization end-to-end, ensuring reliable fabrication, reproducibility, and scalable, production-ready performance.",
@@ -77,9 +73,6 @@ export default function TeamSection() {
               <div className="flex flex-col flex-grow">
                 <h3 className="text-lg font-semibold text-center h-6 flex items-center justify-center">{member.name}</h3>
                 <p className="text-primary font-medium text-sm text-center h-5 flex items-center justify-center mt-2">{member.role}</p>
-                <p className="text-muted-foreground text-xs text-center h-4 flex items-center justify-center mt-1">
-                  {member.title}
-                </p>
                 <p className="text-muted-foreground text-sm leading-relaxed text-left mt-4 flex-grow">
                   {member.bio}
                 </p>

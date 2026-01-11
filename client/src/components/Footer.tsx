@@ -47,24 +47,24 @@ export default function Footer() {
               <div className="grid grid-cols-2 gap-5">
                 <div>
                   <Label htmlFor="firstName" className="text-sm text-muted-foreground">First Name</Label>
-                  <Input id="firstName" placeholder="John" className="mt-1.5" data-testid="input-first-name" />
+                  <Input id="firstName" placeholder="Enter your first name" className="mt-1.5" data-testid="input-first-name" />
                 </div>
                 <div>
                   <Label htmlFor="lastName" className="text-sm text-muted-foreground">Last Name</Label>
-                  <Input id="lastName" placeholder="Doe" className="mt-1.5" data-testid="input-last-name" />
+                  <Input id="lastName" placeholder="Enter your last name" className="mt-1.5" data-testid="input-last-name" />
                 </div>
               </div>
               <div>
                 <Label htmlFor="email" className="text-sm text-muted-foreground">Work Email</Label>
-                <Input id="email" type="email" placeholder="john@hospital.org" className="mt-1.5" data-testid="input-email" />
+                <Input id="email" type="email" placeholder="Enter your email" className="mt-1.5" data-testid="input-email" />
               </div>
               <div>
                 <Label htmlFor="subject" className="text-sm text-muted-foreground">Subject</Label>
-                <Input id="subject" placeholder="Request Product Demo" className="mt-1.5" data-testid="input-subject" />
+                <Input id="subject" placeholder="Enter subject" className="mt-1.5" data-testid="input-subject" />
               </div>
               <div>
                 <Label htmlFor="message" className="text-sm text-muted-foreground">Message</Label>
-                <Textarea id="message" rows={4} className="mt-1.5 resize-none" data-testid="input-message" />
+                <Textarea id="message" placeholder="Enter your message" rows={4} className="mt-1.5 resize-none" data-testid="input-message" />
               </div>
               <Button
                 type="submit"
