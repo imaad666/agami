@@ -25,7 +25,7 @@ export default function HeroSection() {
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-[#0D1B2A]">
           <span className="text-[#1e3a5f]">AAGAMI</span><span className="text-[#C71585]">SEQ</span>
           <br />
-          <span className="whitespace-nowrap">Nanopore Diagnostics</span>
+          <span className="sm:whitespace-nowrap">Nanopore Diagnostics</span>
         </h1>
 
         <p className="text-xl sm:text-2xl text-[#0D1B2A]/70 max-w-3xl mx-auto" style={{ marginTop: '50px' }}>
