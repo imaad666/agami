@@ -1,72 +1,39 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-[#0D1B2A] via-[#162044] to-[#0A1533] text-white">
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-          <div>
-            <h2 className="text-4xl sm:text-5xl font-semibold mb-3">
-              Let's solve
-              <br />
-              <span className="text-[#4169E1]">Cancer</span> together.
-            </h2>
-            <p className="text-white/60 text-lg mt-6 mb-10 max-w-md">
-              Interested in learning more about our technology or exploring partnership opportunities? We'd love to hear from you.
-            </p>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-3">
+            Let's solve
+            <br />
+            <span className="text-[#4169E1]">Cancer</span> together.
+          </h2>
+          <p className="text-white/60 text-lg mt-6 mb-10 max-w-lg mx-auto">
+            Interested in learning more about our technology or exploring partnership opportunities? We'd love to hear from you.
+          </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#4169E1]/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-[#4169E1]" />
-                </div>
-                <div>
-                  <p className="text-xs text-white/40 uppercase tracking-wider mb-1">EMAIL US</p>
-                  <p className="text-white text-lg font-medium">contact@aagmiseq.com</p>
-                </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-[#4169E1]/20 flex items-center justify-center flex-shrink-0">
+                <Mail className="w-5 h-5 text-[#4169E1]" />
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#4169E1]/20 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-[#4169E1]" />
-                </div>
-                <div>
-                  <p className="text-xs text-white/40 uppercase tracking-wider mb-1">OUR HEADQUARTERS</p>
-                  <p className="text-white text-lg font-medium">INCeNSE Office, CeNSE, IISc, Bengaluru, Karnataka 560012</p>
-                </div>
+              <div className="text-left">
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">EMAIL US</p>
+                <p className="text-white text-lg font-medium">contact@aagmiseq.com</p>
               </div>
             </div>
-          </div>
 
-          <div className="bg-white rounded-2xl p-8 text-[#0D1B2A]">
-            <form className="space-y-5" data-testid="form-contact">
-              <div className="grid grid-cols-2 gap-5">
-                <div>
-                  <Label htmlFor="firstName" className="text-sm text-muted-foreground">First Name</Label>
-                  <Input id="firstName" placeholder="Enter your first name" className="mt-1.5" data-testid="input-first-name" />
-                </div>
-                <div>
-                  <Label htmlFor="lastName" className="text-sm text-muted-foreground">Last Name</Label>
-                  <Input id="lastName" placeholder="Enter your last name" className="mt-1.5" data-testid="input-last-name" />
-                </div>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-[#4169E1]/20 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-5 h-5 text-[#4169E1]" />
               </div>
-              <div>
-                <Label htmlFor="email" className="text-sm text-muted-foreground">Work Email</Label>
-                <Input id="email" type="email" placeholder="Enter your email" className="mt-1.5" data-testid="input-email" />
+              <div className="text-left">
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">OUR HEADQUARTERS</p>
+                <p className="text-white text-lg font-medium">INCeNSE Office, CeNSE, IISc, Bengaluru, Karnataka 560012</p>
               </div>
-              <div>
-                <Label htmlFor="subject" className="text-sm text-muted-foreground">Subject</Label>
-                <Input id="subject" placeholder="Enter subject" className="mt-1.5" data-testid="input-subject" />
-              </div>
-              <div>
-                <Label htmlFor="message" className="text-sm text-muted-foreground">Message</Label>
-                <Textarea id="message" placeholder="Enter your message" rows={4} className="mt-1.5 resize-none" data-testid="input-message" />
-              </div>
-                          </form>
+            </div>
           </div>
         </div>
 

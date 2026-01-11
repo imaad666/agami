@@ -48,7 +48,7 @@ const teamMembers = [
 export default function TeamSection() {
   return (
     <section id="team" className="py-24 bg-background">
-      <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-6">The Minds Behind the Innovation</h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -56,7 +56,7 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {teamMembers.map((member) => (
             <Card key={member.id} className="p-6 flex flex-col" data-testid={`card-team-member-${member.id}`}>
               <div className="flex justify-center mb-5">
@@ -71,7 +71,7 @@ export default function TeamSection() {
               </div>
               
               <div className="flex flex-col flex-grow">
-                <h3 className="text-lg font-semibold text-center h-6 flex items-center justify-center">{member.name}</h3>
+                <h3 className="text-lg font-semibold text-center whitespace-nowrap">{member.name}</h3>
                 <p className="text-primary font-medium text-sm text-center h-5 flex items-center justify-center mt-2">{member.role}</p>
                 <p className="text-muted-foreground text-sm leading-relaxed text-left mt-4 flex-grow">
                   {member.bio}
