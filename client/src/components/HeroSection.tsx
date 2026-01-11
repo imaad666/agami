@@ -17,7 +17,7 @@ export default function HeroSection() {
       
       <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/30" />
       
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center" style={{ marginTop: '60px' }}>
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center" style={{ marginTop: '5px' }}>
         <Badge variant="outline" className="mb-8 px-5 py-2 border-[#4169E1] text-[#4169E1] bg-[#4169E1]/10 text-sm">
           PRECISION DIAGNOSTICS
         </Badge>
