@@ -66,14 +66,7 @@ export default function Footer() {
                 <Label htmlFor="message" className="text-sm text-muted-foreground">Message</Label>
                 <Textarea id="message" placeholder="Enter your message" rows={4} className="mt-1.5 resize-none" data-testid="input-message" />
               </div>
-              <Button
-                type="submit"
-                className="w-full bg-[#4169E1] text-white py-6 text-lg"
-                data-testid="button-send-message"
-              >
-                Send Message
-              </Button>
-            </form>
+                          </form>
           </div>
         </div>
 

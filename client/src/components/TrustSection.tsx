@@ -2,7 +2,7 @@ import logoIcon from "@assets/Screenshot_2026-01-05_at_1.43.47_AM_1767557632163.
 import ccampLogo from "@assets/DS_1767879001250.jpg";
 import meityLogo from "@assets/MeitYStartupHub-Logo-FINAL_5_1_1767879012603.png";
 import sidLogo from "@assets/iisc_sid_1767879536206.png";
-import incenseLogo from "@assets/incense_1767879539524.jpeg";
+import incenseLogo from "@assets/INCeNSE_Logo_-_PNG_File_1768132494207.png";
 
 const backers = [
   {
