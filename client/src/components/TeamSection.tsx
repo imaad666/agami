@@ -2,8 +2,8 @@ import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import manojVarmaImg from "@assets/Manoj_varma_1767878481292.png";
-import divyaYadavImg from "@assets/Screenshot_2026-01-11_at_5.20.08_PM_1768132239315.png";
-import muddukrishnaImg from "@assets/Screenshot_2026-01-11_at_5.21.54_PM_1768132376646.png";
+import divyaYadavImg from "@assets/Screenshot_2026-01-11_at_5.32.27_PM_1768132954418.png";
+import muddukrishnaImg from "@assets/muddu_bhaiya_1768133327280.jpeg";
 import anumolImg from "@assets/WhatsApp_Image_2026-01-10_at_11.19.59_AM_1768024244618.jpeg";
 
 const teamMembers = [
@@ -31,6 +31,7 @@ const teamMembers = [
     role: "Founder | CPO",
     initials: "MP",
     image: muddukrishnaImg,
+    objectPosition: "center 15%",
     bio: "Driving product development and engineering excellence, translating cutting-edge research into practical, scalable diagnostic solutions.",
     gradient: "from-purple-500 to-pink-600",
   },
@@ -62,7 +63,12 @@ export default function TeamSection() {
               <div className="flex justify-center mb-5">
                 <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
                   {member.image ? (
-                    <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+                    <AvatarImage 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="object-cover" 
+                      style={member.objectPosition ? { objectPosition: member.objectPosition } : undefined}
+                    />
                   ) : null}
                   <AvatarFallback className={`bg-gradient-to-br ${member.gradient} text-white text-xl font-bold`}>
                     {member.initials}
