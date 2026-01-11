@@ -14,8 +14,8 @@ export default function Footer() {
             Interested in learning more about our technology or exploring partnership opportunities? We'd love to hear from you.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center items-start sm:items-center gap-8">
+            <div className="flex items-center gap-4 w-full sm:w-auto justify-start sm:justify-center">
               <div className="w-12 h-12 rounded-full bg-[#4169E1]/20 flex items-center justify-center flex-shrink-0">
                 <Mail className="w-5 h-5 text-[#4169E1]" />
               </div>
@@ -25,7 +25,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 w-full sm:w-auto justify-start sm:justify-center">
               <div className="w-12 h-12 rounded-full bg-[#4169E1]/20 flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-5 h-5 text-[#4169E1]" />
               </div>
